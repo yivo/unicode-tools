@@ -18,6 +18,10 @@ module UnicodeTools
       string.gsub! SURROUNDING_WHITESPACE_REGEX, ''
     end
 
+    def replace_whitespace(string, replacement = nil, &block)
+      string.gsub(WHITESPACE_REGEX, replacement, &block)
+    end
+
     def replace_whitespace!(string, replacement = nil, &block)
       string.gsub!(WHITESPACE_REGEX, replacement, &block)
     end
