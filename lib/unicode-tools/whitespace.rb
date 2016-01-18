@@ -1,6 +1,6 @@
 module UnicodeTools
   # http://unicode.org/charts/uca/
-  WHITESPACE_CHARS = %w( \u0009-\u000D \u0085 \u2028 \u2029
+  WHITESPACE_CHARS = %w( \u0009-\u000D \u0085 \u2028 \u2029​​
                          \u0020 \u3000 \u1680 \u2000-\u200A
                          \u205F \u00A0 \u202F \u180E )
 
@@ -10,12 +10,16 @@ module UnicodeTools
   SURROUNDING_WHITESPACE_REGEX = /(\A#{WHITESPACE_REGEX.source})|(#{WHITESPACE_REGEX.source}\z)/
 
   class << self
+    #
+    # string = "\f\n\r\t\v​\u00A0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004​\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​\u2028\u2029​\u202f\u205f​\u3000"
+    # string.trim => ""
+    #
     def trim(string)
-      string.gsub SURROUNDING_WHITESPACE_REGEX, ''
+      string.gsub(SURROUNDING_WHITESPACE_REGEX, '')
     end
 
     def trim!(string)
-      string.gsub! SURROUNDING_WHITESPACE_REGEX, ''
+      string.gsub!(SURROUNDING_WHITESPACE_REGEX, '')
     end
 
     def replace_whitespace(string, replacement = nil, &block)
