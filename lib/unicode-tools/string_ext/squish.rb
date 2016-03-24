@@ -8,11 +8,11 @@ module UnicodeTools
       #           \u2028\u2029​\u202f\u205f​\u3000 World!"
       # string.squish => "HelloWorld!"
       def squish
-        gsub(WHITESPACE_REGEX, '')
+        gsub(WHITESPACE_REGEX, ' ')
       end
 
       def squish!
-        gsub!(WHITESPACE_REGEX, '')
+        gsub!(WHITESPACE_REGEX, ' ')
       end
     end
   end
