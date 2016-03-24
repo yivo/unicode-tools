@@ -11,27 +11,31 @@ module UnicodeTools
 
   class << self
     def has_whitespace?(string)
-      !!(string =~ WHITESPACE_REGEX)
+      string.has_whitespace?
     end
 
-    #
-    # string = "\f\n\r\t\v​\u00A0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004​\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​\u2028\u2029​\u202f\u205f​\u3000"
-    # string.trim => ""
-    #
     def trim(string)
-      string.gsub(SURROUNDING_WHITESPACE_REGEX, '')
+      string.trim
     end
 
     def trim!(string)
-      string.gsub!(SURROUNDING_WHITESPACE_REGEX, '')
+      string.trim!
+    end
+
+    def squish(string)
+      string.squish
+    end
+
+    def squish!(string)
+      string.squish!
     end
 
     def replace_whitespace(string, replacement = nil, &block)
-      string.gsub(WHITESPACE_REGEX, replacement, &block)
+      string.replace_whitespace(replacement, &block)
     end
 
     def replace_whitespace!(string, replacement = nil, &block)
-      string.gsub!(WHITESPACE_REGEX, replacement, &block)
+      string.replace_whitespace!(replacement, &block)
     end
   end
 end

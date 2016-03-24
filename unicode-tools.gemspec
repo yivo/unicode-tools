@@ -14,4 +14,7 @@ Gem::Specification.new do |s|
   s.files           = `git ls-files -z`.split("\x0")
   s.test_files      = `git ls-files -z -- {test,spec,features}/*`.split("\x0")
   s.require_paths   = ['lib']
+
+  s.add_development_dependency 'rake', '~> 10.0'
+  s.add_development_dependency 'test-unit', '~> 3.1.8'
 end
