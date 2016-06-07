@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'unicode-tools/whitespace'
 require 'unicode-tools/string_ext/base'
 require 'unicode-tools/string_ext/trim'

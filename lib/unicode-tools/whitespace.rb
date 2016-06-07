@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module UnicodeTools
   # http://unicode.org/charts/uca/
   WHITESPACE_CHARS = %w( \u0009-\u000D \u0085 \u2028 \u2029​​
