@@ -3,11 +3,11 @@
 
 Gem::Specification.new do |s|
   s.name            = 'unicode-tools'
-  s.version         = '1.0.1'
+  s.version         = '1.0.2'
   s.authors         = ['Yaroslav Konoplov']
   s.email           = ['eahome00@gmail.com']
-  s.summary         = 'Unicode Tools'
-  s.description     = 'Unicode Tools'
+  s.summary         = 'Unicode-friendly String#trim and String#squish'
+  s.description     = 'Unicode-friendly String#trim and String#squish'
   s.homepage        = 'http://github.com/yivo/unicode-tools'
   s.license         = 'MIT'
 
