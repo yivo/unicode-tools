@@ -1,4 +1,4 @@
 ## Gemfile
 ```ruby
-gem 'unicode-tools', github: 'yivo/unicode-tools'
+gem 'unicode-tools', '~> 1.0'
 ```
