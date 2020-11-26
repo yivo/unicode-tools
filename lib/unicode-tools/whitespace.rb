@@ -7,10 +7,10 @@ module UnicodeTools
                          \u0020 \u3000 \u1680 \u2000-\u200A
                          \u205F \u00A0 \u202F \u180E ).freeze
 
-  WHITESPACE_REGEX             = /[#{WHITESPACE_CHARS.join('')}]+/.freeze
-  LEADING_WHITESPACE_REGEX     = /\A#{WHITESPACE_REGEX.source}+/.freeze
-  TRAILING_WHITESPACE_REGEX    = /#{WHITESPACE_REGEX.source}+\z/.freeze
-  SURROUNDING_WHITESPACE_REGEX = /(\A#{WHITESPACE_REGEX.source})|(#{WHITESPACE_REGEX.source}\z)/.freeze
+  WHITESPACE_REGEXP             = /[#{WHITESPACE_CHARS.join('')}]+/.freeze
+  LEADING_WHITESPACE_REGEXP     = /\A#{WHITESPACE_REGEXP.source}+/.freeze
+  TRAILING_WHITESPACE_REGEXP    = /#{WHITESPACE_REGEXP.source}+\z/.freeze
+  SURROUNDING_WHITESPACE_REGEXP = /(\A#{WHITESPACE_REGEXP.source})|(#{WHITESPACE_REGEXP.source}\z)/.freeze
 
   class << self
     def has_whitespace?(string)

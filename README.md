@@ -1,5 +1,7 @@
-## Unicode-friendly String#trim and String#squish
+# Unicode-friendly String#trim and String#squish
+
 ## Gemfile
+
 ```ruby
-gem 'unicode-tools', '~> 1.0'
+gem 'unicode-tools', '~> 2.0.0'
 ```

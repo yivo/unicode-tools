@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module UnicodeTools
-  module StringExt
+  module StringExtension
     module Trim
 
       # Removes leading and trailing whitespace.
@@ -13,27 +13,27 @@ module UnicodeTools
       #           ​\u2028\u2029​\u202f\u205f​\u3000"
       # string.trim => ""
       def trim
-        gsub(SURROUNDING_WHITESPACE_REGEX, '')
+        gsub(SURROUNDING_WHITESPACE_REGEXP, '')
       end
 
       def trim!
-        gsub!(SURROUNDING_WHITESPACE_REGEX, '')
+        gsub!(SURROUNDING_WHITESPACE_REGEXP, '')
       end
 
       def ltrim
-        gsub(LEADING_WHITESPACE_REGEX, '')
+        gsub(LEADING_WHITESPACE_REGEXP, '')
       end
 
       def ltrim!
-        gsub!(LEADING_WHITESPACE_REGEX, '')
+        gsub!(LEADING_WHITESPACE_REGEXP, '')
       end
 
       def rtrim
-        gsub(TRAILING_WHITESPACE_REGEX, '')
+        gsub(TRAILING_WHITESPACE_REGEXP, '')
       end
 
       def rtrim!
-        gsub!(TRAILING_WHITESPACE_REGEX, '')
+        gsub!(TRAILING_WHITESPACE_REGEXP, '')
       end
     end
   end

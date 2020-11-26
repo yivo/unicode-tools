@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module UnicodeTools
-  module StringExt
+  module StringExtension
     module Squish
 
       # Removes leading, trailing whitespace and
@@ -18,8 +18,9 @@ module UnicodeTools
       end
 
       def squish!
-        gsub!(SURROUNDING_WHITESPACE_REGEX, '')
-        gsub!(WHITESPACE_REGEX, ' ')
+        return self if empty?
+        gsub!(SURROUNDING_WHITESPACE_REGEXP, '')
+        gsub!(WHITESPACE_REGEXP, ' ')
         self
       end
     end
