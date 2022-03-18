@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name            = 'unicode-tools'
-  s.version         = '2.0.0'
+  s.version         = '2.0.1'
   s.authors         = ['Yaroslav Konoplov']
   s.email           = ['eahome00@gmail.com']
   s.summary         = 'Unicode-friendly String#trim and String#squish'
